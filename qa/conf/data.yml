@@ -1,0 +1,55 @@
+# you describe your data using the YAML notation here
+# and then load them using Fixtures.load("data.yml")
+
+User(harald):
+ email: harald@gmail.com
+ password: secret
+ fullname: harald
+
+User(carol):
+ email: carol@gmail.com
+ password: asdfgh
+ fullname: carol
+ 
+User(charly):
+ email: charly@gmail.com
+ password: mymom
+ fullname: Charly
+    
+Question(haraldQuestion):
+ owner: harald
+ content: >
+  My new blog is cool?
+  
+Question(haraldQuestion2):
+ owner: harald
+ content: >
+  is coool!
+  timestamp: 456
+
+Answer(carolAnswer):
+ owner: carol
+ question: haraldQuestion
+ content: > 
+  Thats true!
+                   
+Answer(charlyAnswer):
+ owner: charly
+ question: haraldQuestion
+ content: >
+  blaubeere !
+  
+#Vote(haraldVote):
+#sign: positive
+#owner: harald
+#item: carolAnswer
+ 
+#Vote(charlyVote):
+#sign: positive
+#owner: charly
+#item: carolAnswer
+ 
+#Vote(carolVote):
+#sign: negative
+#owner: carol
+#item: haraldQuestion
